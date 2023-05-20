@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+HELLO HTML <br/>
+
+<a href="http://localhost:8020/exweb/param.do?x=%EC%A7%B1%EA%B5%AC&y=%EC%A7%B1%EC%95%84">ParamServlet 실행 링크</a>
+<a href="/exweb/param.do?x=짱구&y=짱아">ParamServlet 실행 링크 (주소축소1)</a>
+<a href="param.do?x=짱구&y=짱아">ParamServlet 실행 링크(주소 축소 2)</a>
+<!-- 모두 같은 방법의 주소 입력 방법  -->
+<form action="/exweb/param.do">
+<input type = "submit">
+<input type ="text" name="x" value="">
+<input type ="text" name="y" value="">
+</form>
+
+<h2>덧셈계산기</h2>
+<form action="/exweb/cal.do" method = "POST">
+	<input type = "submit"/>
+N: <input type="number" name="n" value ="0">	
+M: <input type="number" name="m" value ="0">	
+</form>
+
+<h2>계산기</h2>
+<form action="/exweb/Pluscal.do" method = "POST">
+	<label for="fo">A : </label>
+	<input type = "number" id="fo" name="a" value="0">
+	<select name="op">
+					<option value="plus">+</option>
+					<option value="min">-</option>
+					<option value="mul">*</option>
+					<option value="div">/</option>
+	</select>	
+	<label for="nu">B : </label>
+	<input type="number" id="nu" name="b" value="0">
+	<input type="submit" value="입력완료">
+</form>
+
+<h2>원-달러 계산기</h2>
+<form action= "/exweb/exdollar.do" method ="POST">
+	<input type="number" name="num" value="0">
+	<select name="unit">
+		<option value="won">원</option>
+		<option value="dol">달러</option>
+	</select>
+	<input type="submit">
+<!--  금액을 입력하고 원을 선택하고 제출을 하면 원->달러 --> 
+<!--  금액을 입력하고 원을 선택하고 제출을 하면 달러->원 -->  
+</form>
+
+
+
+
+
+
+</body>
+</html>
